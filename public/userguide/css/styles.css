@@ -1,0 +1,82 @@
+#tag{
+	font-size: 13px;
+	color: white;
+}
+/*class default*/
+#cd{
+	font-size: 13px;
+	color: #66d9ef ;
+	text-shadow: 
+}
+/*nama class*/
+#nc{
+	font-size: 15px;
+	color: #a6e22d;
+}
+/*extends and public */
+#ep{
+	font-size: 13px;
+	color: #f92672;
+}
+
+#str{
+	font-size: 13px;
+	color: #e6db74;
+}
+
+#ths{
+	font-size: 13px;
+	color:#EB813A;
+}
+
+#block{
+	font-size: 13px;
+	color: white;
+	font-style: bold;
+	border;
+	padding: 2px;
+	background-color: #228896;
+
+}
+
+#no{
+	font-size: 13px;
+	color:#8F36F4;
+}
+
+#note{
+	padding: 2px;
+	border-style: solid;
+	border-width: 1px; 
+	font-size: 13px;
+	color: #228896;
+	font-style: bold;
+}
+
+#uli{
+	font-style:italic;
+	font-size: 15px;
+	color: #009248;
+}
+
+.button-right{
+	float: right;
+}
+.button-left{
+	float: left;
+}
+
+#sf{
+	font-size: 18px;
+}
+
+#warning{
+	font-size: 16px;
+	color: red;
+}
+
+#txt{
+	font-family: sans-serif;
+	font-style: bold;
+	font-size: 16px;
+}

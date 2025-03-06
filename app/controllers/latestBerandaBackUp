@@ -1,0 +1,44 @@
+<?php 
+
+class Beranda extends Controller{
+	
+	public function __construct(){
+		$this->db = new Database;
+		$this->pagination = new Pagination;
+		
+	}
+	public function index(){
+		$data['title'] = 'aaa';
+		$this->limit = 2;
+		$this->offset = !empty($_GET['page'])?(($_GET['page']-1)*$this->limit):0;
+		$this->db->query("SELECT * FROM product");
+		$this->db->resultSet();
+		$pagConfig = array(
+			'baseURL' => BASE_URL,
+			'totalRows' => $this->db->rowCount(),
+			'perPage' => $this->limit
+		);
+		var_dump($this->db->rowCount());
+		$pagination = new Pagination($pagConfig);
+
+		$data= $this->model('Mproduct')->getAllProduct($this->limit, $this->offset);
+		$this->view('vberanda',$data);
+		
+	}
+
+	public function detail($id){
+		$data['title'] = 'Detail Product';
+		$data['pro'] = $this->model('Mproduct')->getProductById($id);
+		$this->view('vdetailproduct', $data);
+		//var_dump($data['limit']);
+	}
+
+	public function cart($id){
+		if (isset($_GET['id']) && !isset($_POST['update'])) {
+			# code...
+			$data = $this->model('Mproduct')->getProductById($id);
+		}
+	}
+}
+
+?>
